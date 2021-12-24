@@ -1,0 +1,27 @@
+language: generic
+
+sudo: required
+services:
+  - docker
+
+before_install:
+  - docker build -t megajon/megajon-web -f Dockerfile.dev .
+
+script:
+  - docker run -e CI=true megajon/megajon-web npm run test -- --coverage
+
+deploy:
+  provider: elasticbeanstalk
+  region: 'us-east-1'
+  app: 'megajon-web-client'
+  env: 'Megajonwebclient-env'
+  bucket_name: 'elasticbeanstalk-us-east-1-952519373382'
+  bucket_path: 'Megajonweb-env'
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_KEY
+# Megajonweb-env.eba-cvzkhp3i.us-east-1.elasticbeanstalk.com
+
+# access_key_id: $AWS_ACCESS_KEY
+# secret_access_key: $AWS_SECRET_KEY
