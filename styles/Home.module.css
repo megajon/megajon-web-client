@@ -1,4 +1,4 @@
-@media screen and (max-width: 700px) {
+@media screen and (min-device-width: 280px) and (max-device-width: 374.98px) {
 
   .socialIcon {
     height: 20px;
@@ -62,8 +62,71 @@
 }
 
 
+@media screen and (min-device-width: 375px) and (max-device-width: 767.98px)  {
 
-@media screen and (min-width: 701px) {
+  .socialIcon {
+    height: 24px;
+    width: 24px;
+  }
+
+  .githubIcon {
+    border-radius: 50%
+  }
+
+  .iconsContainer {
+    position: relative;
+    top: 10px;
+    right: 12px;
+    display: grid;
+    justify-content: right;
+    grid-template-columns: 20px 20px 20px 20px;
+    grid-gap: 10px;
+  }
+
+  .heroImage {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+  }
+
+  .heroName {
+    text-align: center;
+    font-size: 1em;
+  }
+
+  .herohr {
+    color: black;
+    border-width: 0.5px;
+    width: 250px;
+  }
+
+  .heroContainer {
+    position: relative;
+    top: 40px;
+  }
+
+  .logoImage {
+    width: 75px;
+    height: 75px;
+  }
+
+  .logosContainer {
+    position: relative;
+    top: 50px;
+    display: grid;
+    grid-template-columns: 75px 75px 75px 75px;
+    grid-template-rows: 75px 75px 75px;
+    grid-gap: 16px;
+    justify-content: center;
+  }
+
+}
+
+
+@media screen and (min-width: 768px) {
 
   .socialIcon {
     height: 50px;
