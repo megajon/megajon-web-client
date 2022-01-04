@@ -1,4 +1,4 @@
-@media screen and (min-device-width: 280px) and (max-device-width: 374.98px) {
+@media screen and (min-width: 280px) and (max-width: 374.98px) {
 
   .socialIcon {
     height: 20px;
@@ -62,7 +62,7 @@
 }
 
 
-@media screen and (min-device-width: 375px) and (max-device-width: 767.98px)  {
+@media screen and (min-width: 375px) and (max-width: 767.98px)  {
 
   .socialIcon {
     height: 24px;
@@ -126,7 +126,7 @@
 }
 
 
-@media screen and (min-device-width: 768px) and (max-device-width: 1023.98px) {
+@media screen and (min-width: 768px) and (max-width: 1023.98px) {
 
   .socialIcon {
     height: 30px;
@@ -189,7 +189,7 @@
 }
 
 
-@media screen and (min-device-width: 1024px) and (max-device-width: 1279.98px) {
+@media screen and (min-width: 1024px) and (max-width: 1279.98px) {
 
   .socialIcon {
     height: 30px;
@@ -254,7 +254,7 @@
 }
 
 
-@media screen and (min-device-width: 1280px) {
+@media screen and (min-width: 1280px) {
 
   .socialIcon {
     height: 40px;
