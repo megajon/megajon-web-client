@@ -1,18 +1,16 @@
 import { gql } from "@apollo/client"
 import client from "../apollo-client"
-import Icons from "../components/Icons"
-import Hero from "../components/Hero"
-import Logos from "../components/Logos"
+import { render, screen } from '@testing-library/react'
+import Logos from '../components/Logos'
 
-export default function Home({ menuIcons, hero, logos })  {
-  return (
-    <div>
-      <Icons menuIcons={menuIcons} />
-      <Hero hero={hero} />
-      <Logos logos={logos} />
-    </div>
-  )
-}
+describe('Logos', () => {
+  test('renders Logos component', () => {
+    render(<Logos logos={logos} />);
+
+    screen.debug();
+  });
+});
+
 
 export async function getStaticProps(context) {
   const { data } = await client.query({
