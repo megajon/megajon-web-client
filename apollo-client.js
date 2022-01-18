@@ -1,7 +1,10 @@
-import { ApolloClient, InMemoryCache } from "@apollo/client";
+import fetch from 'cross-fetch';
+import { ApolloClient, InMemoryCache, HttpLink } from "@apollo/client";
+
 
 const client = new ApolloClient({
-    uri: "https://megajon-web-api.herokuapp.com/api/graphql",
+    link: new HttpLink({ uri: 'http://localhost:3001/api/graphql', fetch }),
+    // uri: "http://localhost:3001/api/graphql",
     cache: new InMemoryCache(),
 });
 
