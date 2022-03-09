@@ -3,6 +3,7 @@ import { Logos } from '../components/Logos'
 import { Icons } from '../components/Icons'
 import { Hero } from '../components/Hero'
 import { GET_STATIC_CONTENT } from '../utils/getStaticContent';
+import Script from 'next/script';
 
 export default function Home({ })  {
   const { loading, error, data } = useQuery(GET_STATIC_CONTENT);
@@ -25,6 +26,20 @@ export default function Home({ })  {
       <Icons menuIcons={menuIcons} />
       <Hero hero={hero} />
       <Logos logos={logos} />
+      {/* <!-- Global site tag (gtag.js) - Google Analytics --> */}
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=G-96HW8XQYYP"
+        strategy="afterInteractive"
+      />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){window.dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-96HW8XQYYP');
+        `}
+      </Script>
     </div>
   )
 }
